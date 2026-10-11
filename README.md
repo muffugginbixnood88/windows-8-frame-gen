@@ -8,7 +8,7 @@ A) Proxy (simplest): copy d3d11.dll + framegen.ini next to the game's 64-bit .ex
 B) Inject (for games that don't pick up a local d3d11.dll): start the game, then run
    inject.exe <game.exe> framegen.dll      (framegen.ini must sit next to framegen.dll)
    
-v1.0 toggled by pressing F10.
+v1.0 toggled by pressing F10 while
 V1.1 is a 10 second delay.
 ## Pacing (capped base frames)
 Every real frame is followed by an interpolated one, both presented with vsync, so
