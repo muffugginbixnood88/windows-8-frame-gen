@@ -1,4 +1,4 @@
-# framegen - GPU-only 2x frame generation for 64-bit DX11 games (vsync-paced)
+# framegen - GPU-side 2x frame generation for windows8.1 64-bit DX11 games (vsync-paced)
 
 Build: run build.bat from an "x64 Native Tools Command Prompt for VS".
   -> d3d11.dll (proxy), framegen.dll (injectable copy), inject.exe
@@ -8,11 +8,9 @@ A) Proxy (simplest): copy d3d11.dll + framegen.ini next to the game's 64-bit .ex
    Remove by deleting d3d11.dll.
 B) Inject (for games that don't pick up a local d3d11.dll): start the game, then run
    inject.exe <game.exe> framegen.dll      (framegen.ini must sit next to framegen.dll)
-
-No hotkey: once the game's swapchain is detected there is a 10-second countdown (StartDelaySeconds
-in framegen.ini), then frame generation starts by itself with a short beep. Progress is written to
-framegen.log ("frame generation starts in N s"). To switch it off, set Enabled=0 or remove the DLL.
-
+   
+v1.0- press F10.
+V1.1- 10 second delay.
 ## Pacing (capped base frames)
 Every real frame is followed by an interpolated one, both presented with vsync, so
 output = monitor refresh and the game's base fps is capped at half of it
