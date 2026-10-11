@@ -1,4 +1,4 @@
-# framegen - GPU-only 2x frame generation for 64-bit DX11 games (vsync-paced)
+# framegen - GPU-side 2x frame generation for windows 8.1 64-bit DX11 games (vsync-paced)
 
 Build: run build.bat from an "x64 Native Tools Command Prompt for VS".
   -> d3d11.dll (proxy), framegen.dll (injectable copy), inject.exe
