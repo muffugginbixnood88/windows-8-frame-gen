@@ -1,0 +1,34 @@
+
+name: Build FrameGen
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Download project files
+        uses: actions/checkout@v4
+
+      - name: Set up MSVC compiler
+        uses: ilammy/msvc-dev-cmd@v1
+        with:
+          arch: x64
+
+      - name: Compile program
+        shell: cmd
+        run: call build.bat
+
+      - name: Upload compiled files
+        uses: actions/upload-artifact@v4
+        with:
+          name: framegen-windows-x64
+          path: |
+            d3d11.dll
+            framegen.dll
+            inject.exe
+            framegen.ini
+          if-no-files-found: error
