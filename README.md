@@ -9,7 +9,7 @@ B) Inject (for games that don't pick up a local d3d11.dll): start the game, then
    inject.exe <game.exe> framegen.dll      (framegen.ini must sit next to framegen.dll)
    
 v1.0 toggled by pressing F10 while
-V1.1 is a 10 second delay. the F10 version has better compatibility and it's more convenient.
+V1.1 is a 10 second delay. the F10 version has better compatibility and it is more convenient.
 ## Pacing (capped base frames)
 Every real frame is followed by an interpolated one, both presented with vsync, so
 output = monitor refresh and the game's base fps is capped at half of it
